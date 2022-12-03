@@ -121,10 +121,10 @@ def brique3_rebond():
         if (brique3_x[h]+30+rayon) >= x >= (brique3_x[h]-rayon) and y == (brique3_y[h] + 8 + rayon):
             vitesse_balle_x = vitesse_balle_x
             vitesse_balle_y = -vitesse_balle_y
-        elif (brique3_x[h]+30+rayon) >= x >= (brique3_x[h]-rayon) and (brique3_y[h]-rayon) <= y < (brique3_y[h] + 8):
+        elif (brique3_x[h]+30+rayon) >= x >= (brique3_x[h]-rayon) and (brique3_y[h]-rayon) == y:
             vitesse_balle_x = vitesse_balle_x
             vitesse_balle_y = -vitesse_balle_y
-        elif (brique3_x[h]+30+2) >= x >= (brique3_x[h]-2) and (brique3_y[h] - rayon) < y < (brique3_y[h] + 8 + rayon):
+        elif (brique3_x[h]+30+2) >= x >= (brique3_x[h]-rayon) and (brique3_y[h] - rayon) < y < (brique3_y[h] + 8 + rayon):
             vitesse_balle_x = -vitesse_balle_x
             vitesse_balle_y = vitesse_balle_y
     return vitesse_balle_x, vitesse_balle_y
@@ -209,6 +209,8 @@ def draw():
     pyxel.load("ressources/objects.pyxres")
     if jeu is True:
         if vie > 0:
+            if balle is False:
+                pyxel.text(190, 100, "Espace pour commencer" , 7)
             if brique2_etat is True:
                 pyxel.blt(brique2_x, brique2_y, 0, 0, 9, 30, 8, )
             if brique2__etat is True:
