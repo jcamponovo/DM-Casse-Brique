@@ -34,7 +34,7 @@ brique1 = True
 brique2 = True
 brique2_etat = True
 brique2__etat = True
-jeu = False
+jeu = True
 balle_vb = True
 couleur = random.randint(0, 15)
 
