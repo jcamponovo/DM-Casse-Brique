@@ -3,7 +3,7 @@ import random
 
 
 pyxel.init(256, 256, title="Casse_Brique")
-
+pyxel.load("ressources/objects.pyxres")
 plateforme_x = 108
 plateforme_y = 240
 balle = False
@@ -207,7 +207,7 @@ def update():
 def draw():
 
     pyxel.cls(0)
-    pyxel.load("ressources/objects.pyxres")
+   
     if jeu is True:
         if vie > 0:
             if balle is False:
